@@ -7,6 +7,9 @@ import GlobalStyles from '../components/GlobalStyles/GlobalStyles';
 import getConfig from 'next/config';
 import axios from 'axios';
 
+import { DefaultSeo } from 'next-seo';
+import SEO from '../next.seo.config';
+
 
 const theme = {
   colors: {
@@ -19,6 +22,7 @@ function MyApp({ Component, pageProps, navigation }) {
   // console.log(navigation)
   return (
     <>
+      <DefaultSeo {...SEO} />
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         {/* <Header isDark /> */}
