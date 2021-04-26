@@ -3,6 +3,7 @@ import getConfig from 'next/config';
 import styled from '@emotion/styled';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { NextSeo } from 'next-seo';
 
 
 const Movie = ({ movie }) => {
@@ -18,11 +19,23 @@ const Movie = ({ movie }) => {
   //   getData();
   // }, [])
 
-
   // console.log(movie)
+
+
+  const SEO = {
+    title: `Next Movies | ${movie.title}`,
+    description: movie.description,
+
+    openGraph: {
+      title: `Next Movies | ${movie.title}`,
+      description: movie.description,
+    }
+  };
+
 
   return (
     <CardStyled>
+      <NextSeo {...SEO} />
       <div className="movie_container">
         <div className="body">
         <h2>{ movie.title }</h2>
