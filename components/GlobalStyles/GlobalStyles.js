@@ -359,7 +359,7 @@ const GlobalStyles = () => (
             }
 
             .container {
-                max-width: 1080px;
+                max-width: 1200px;
                 width: 100%;
                 margin: 0 auto;
                 padding: 30px;
@@ -375,12 +375,7 @@ const GlobalStyles = () => (
                 padding: 30px;
                 display: grid;
                 grid-template-columns: 1fr ;
-                /* grid-gap: 1rem; */
             }
-
-            /* .movie {
-              padding: 0 auto;
-            } */
 
 
             @media (max-width: 1200px) {

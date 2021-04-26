@@ -19,7 +19,7 @@ const Movie = ({ movie }) => {
   // }, [])
 
 
-  console.log(movie)
+  // console.log(movie)
 
   return (
     <CardStyled>

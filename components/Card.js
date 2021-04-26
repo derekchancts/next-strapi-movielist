@@ -5,17 +5,25 @@ import Link from 'next/link';
 
 const Card = ({ movie }) => {
   const { API_URL } = process.env;
+
+  if(!movie.genre) {
+    movie.genre = {}
+    movie.genre.slug = 'uncategorized'
+  }
   
   return (
     <CardStyled>
       <div className="poster">
         {/* <img src={API_URL + movie.poster.url} alt={movie.title}/> */}
-        <Image 
-          src={API_URL + movie.poster.url} 
-          alt={movie.title}
-          width={350}
-          height={400}
-        />
+        {movie.poster &&  
+          <Image 
+            src={API_URL + movie.poster.url} 
+            alt={movie.title}
+            width={350}
+            height={400}
+            layout="responsive"
+          />
+        }
       </div>
       <div className="body">
         <h3>{ movie.title }</h3>
@@ -23,6 +31,7 @@ const Card = ({ movie }) => {
         {/* <Link href="/movies/[id]" as={`/movies/${movie.id}`} >    Next.js 10 does not require the use of "as". */}  
         {/* <Link href={`/movies/${movie.id}`} > */}
         {/* <Link href={`/movies/${movie.slug}`} > */}
+        
         <Link href={`/movies/${movie.genre.slug}/${movie.slug}`} >
           <a>More about this movie</a>
         </Link>
