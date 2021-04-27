@@ -20,7 +20,10 @@ module.exports = {
     API_URL: process.env.API_URL,
   },
   images: {
-    domains: ['localhost']
+    domains: ['localhost', '128.199.174.226']
+  },
+  future: {
+    webpack5: true,
   },
   // images: {
   //   deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

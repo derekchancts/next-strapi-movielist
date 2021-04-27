@@ -40,6 +40,8 @@ function MyApp({ Component, pageProps, navigation }) {
 }
 
 
+
+/*
 const { publicRuntimeConfig } = getConfig();
 
 MyApp.getInitialProps = async () => {
@@ -50,6 +52,23 @@ MyApp.getInitialProps = async () => {
 
   return { navigation }
 }
+*/
+
+
+/*
+export const getServerSideProps = async () => {
+
+  const { API_URL } = process.env;
+  const navigation = await axios(`${API_URL}/navigations`);
+  console.log(navigation)
+
+  return {
+    props: {
+      navigation
+    }
+  }
+};
+*/
 
 
 export default MyApp
