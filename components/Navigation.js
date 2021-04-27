@@ -15,7 +15,7 @@ const Navigation = () => {
   return (
     <NavigationStyled color1={color}>
       <ul>
-        {/* <li>
+        <li>
           <Link  href="/about"><a className={router.pathname === '/about' ? 'active' : ''}>About</a></Link>
         </li>
         <li>
@@ -23,15 +23,15 @@ const Navigation = () => {
         </li>
         <li>
           <Link  href="/contact"><a className={router.pathname === '/contact' ? 'active' : ''}>Contact</a></Link>
-        </li> */}
-        {/* {navigation && navigation.map(item => ( */}
-        {menuItems && menuItems.map(item => (
+        </li> 
+        {/* {navigation && navigation.map(item => (
+        {/* {menuItems && menuItems.map(item => (
           <li key={item.id}>
             <Link href={item.slug}>
               <a className={router.pathname === item.slug ? 'active' : '' }>{item.title}</a>
             </Link>
           </li>
-        ))}
+        ))} */}
       </ul>
     </NavigationStyled>
   )
