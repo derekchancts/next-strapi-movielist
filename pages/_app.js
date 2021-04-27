@@ -10,6 +10,9 @@ import axios from 'axios';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next.seo.config';
 
+import ContextWrapper from '../components/ContextWrapper';
+
+
 
 const theme = {
   colors: {
@@ -26,7 +29,10 @@ function MyApp({ Component, pageProps, navigation }) {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         {/* <Header isDark /> */}
-        <Header navigation={navigation} />
+        <ContextWrapper navigation={navigation}>
+          {/* <Header navigation={navigation} /> */}
+          <Header  />
+          </ContextWrapper>
         <Component {...pageProps} />
       </ThemeProvider>
     </>

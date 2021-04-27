@@ -3,9 +3,12 @@ import { rem } from 'polished';
 import Navigation from './Navigation';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import ToggleNavigationColorButton from './ToggleNavigationColorButton';
 
+ 
 
-const Header = ({ isDark, navigation }) => {
+// const Header = ({ isDark, navigation }) => {
+const Header = ({ isDark }) => {
   const router = useRouter();
 
   return (
@@ -18,7 +21,9 @@ const Header = ({ isDark, navigation }) => {
             <Link href='/'><a>Next Movies</a></Link>
           </span>
         </div>
-        <Navigation navigation={navigation} />
+        {/* <Navigation navigation={navigation} /> */}
+        <Navigation />
+        {/* <ToggleNavigationColorButton  /> */}
       </div>
     </HeaderStyled>
   )
