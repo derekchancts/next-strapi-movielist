@@ -11,6 +11,9 @@ import { DefaultSeo } from 'next-seo';
 import SEO from '../next.seo.config';
 
 import ContextWrapper from '../components/ContextWrapper';
+import { CookiesProvider } from "react-cookie"
+
+// import { appWithTranslation } from '../i18n';
 
 
 
@@ -30,8 +33,8 @@ function MyApp({ Component, pageProps, navigation }) {
         <GlobalStyles />
         {/* <Header isDark /> */}
         <ContextWrapper navigation={navigation}>
-          {/* <Header navigation={navigation} /> */}
-          <Header  />
+          <Header navigation={navigation} />
+          {/* <Header  /> */}
           </ContextWrapper>
         <Component {...pageProps} />
       </ThemeProvider>
@@ -55,11 +58,10 @@ MyApp.getInitialProps = async () => {
 */
 
 
-/*
+
 export const getServerSideProps = async () => {
 
-  const { API_URL } = process.env;
-  const navigation = await axios(`${API_URL}/navigations`);
+  const navigation = await axios(`${process.env.API_URL}/navigations`);
   console.log(navigation)
 
   return {
@@ -68,7 +70,8 @@ export const getServerSideProps = async () => {
     }
   }
 };
-*/
 
 
-export default MyApp
+
+// export default appWithTranslation(MyApp);
+export default MyApp;

@@ -1,4 +1,13 @@
 require('dotenv').config();
+// const { nextI18NextRewrites } = require('next-i18next');
+// const { nextI18NextRewrites } = require('next-i18next/rewrites')
+
+
+
+const localeSubpaths = {
+  hr: 'hr'
+};
+
 
 // const path = require('path')
 
@@ -13,6 +22,8 @@ require('dotenv').config();
 
 
 module.exports = {
+  // rewrites: async () => nextI18NextRewrites(localeSubpaths),
+
   env: {
     API_URL: process.env.API_URL
   },
