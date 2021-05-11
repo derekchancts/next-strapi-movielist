@@ -7,8 +7,8 @@ import ToggleNavigationColorButton from './ToggleNavigationColorButton';
 
  
 
-// const Header = ({ isDark, navigation }) => {
-const Header = ({ isDark }) => {
+const Header = ({ isDark, navigation }) => {
+// const Header = ({ isDark }) => {
   const router = useRouter();
 
   return (
@@ -21,8 +21,8 @@ const Header = ({ isDark }) => {
             <Link href='/'><a>Next Movies</a></Link>
           </span>
         </div>
-        {/* <Navigation navigation={navigation} /> */}
-        <Navigation />
+        <Navigation navigation={navigation} />
+        {/* <Navigation /> */}
         {/* <ToggleNavigationColorButton  /> */}
       </div>
     </HeaderStyled>
@@ -43,7 +43,8 @@ const HeaderStyled = styled.header`
     padding: 30px;
     display: flex;
     justify-content: space-between;
-  
+    align-items: center;
+    
             
     .logo {
       display: flex;

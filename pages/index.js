@@ -3,11 +3,15 @@ import Card from '../components/Card';
 // import styles from '../styles/Home.module.css'
 // import { Flex, Box } from 'reflexbox'
 
+// import { withTranslation } from '../i18n';
+
+
 
  const Home = ({ movies }) => {
   // console.log(movies);
   return (
     <div className='container'>
+    {/* <h2>{t('Latest Movies')}</h2> */}
     {/* <Flex> */}
       {movies && movies.map(movie => {
         return (
@@ -36,4 +40,5 @@ export const getServerSideProps = async () => {
 
 
 
+// export default withTranslation()(Home);
 export default Home;

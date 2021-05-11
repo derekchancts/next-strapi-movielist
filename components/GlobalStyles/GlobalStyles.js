@@ -3,9 +3,17 @@ import { Global, css } from '@emotion/react';
 const GlobalStyles = () => (
     <>
         <Global styles={css`
+
+            :root {
+              --input-border: #8b8a8b;
+              --input-focus-h: 245;
+              --input-focus-s: 100%;
+              --input-focus-l: 42%;
+            }
+
             html {
                 line-height: 1.15; /* 1 */
-                -ms-text-size-adjust: 100%; /* 2 */
+                -ms-text-size-adjust: 100%; /* 2 */ 
                 -webkit-text-size-adjust: 100%; /* 2 */
             }
 
@@ -13,6 +21,7 @@ const GlobalStyles = () => (
                 margin: 0;
                 /* padding: 0; */
             }
+            
 
             article,
             aside,
@@ -375,6 +384,117 @@ const GlobalStyles = () => (
                 padding: 30px;
                 display: grid;
                 grid-template-columns: 1fr ;
+            }
+
+
+            .page_container {
+              max-width: 960px;
+              width: 100%;
+              margin: 0 auto;
+              padding: 30px;
+              display: grid;
+              grid-template-columns: 1fr ;
+            }
+
+            .page_container h1 {
+              margin: 2rem auto;
+              text-align: center;
+            }
+
+            .page ul {
+              list-style-type: none;
+            }
+
+            .login,
+            .article,
+            .page li h1 {
+              margin: 2rem auto;
+              text-align: center;
+            }
+
+            .page li p {
+              font-size: 1.2rem;
+              line-height: 1.5;
+            }
+
+
+            /* .login-form {
+              width:200px;
+              padding:20px;
+            } */
+
+            /* .input {
+              font-size: 16px;
+              font-size: max(16px, 1em);
+              font-family: inherit;
+              padding: 0.25em 0.5em;
+              background-color: #fff;
+              border: 2px solid var(--input-border);
+              border-radius: 4px;
+            } */
+
+            /* form input {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+            } */
+
+            .form-style-1 {
+              max-width: 400px;
+              margin: 10px auto;
+              padding: 20px 12px 10px 20px;
+              /* font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
+            }
+
+            /* .form-style-1 div {
+              padding: 0;
+              display: block;
+              margin: 10px 0;
+            } */
+
+            .form-style-1 label{
+              /* margin:0 0 3px 0; */
+              margin-bottom: 3px;
+              padding: 0px;
+              display:block;
+              font-weight: bold;
+              /* text-align: center; */
+            }
+
+            .form-style-1 input[type=text], 
+            .form-style-1 input[type=password], 
+            .form-style-1 input[type=email] {
+              display: block;
+              width: 100%;
+              border:1px solid #BEBEBE;
+              padding: 7px;
+              margin-bottom: 1rem;
+              /* outline: none;	 */
+            }
+
+            .no-data,
+            .btn {
+              text-align: center;
+              margin: 0.5rem 0;
+            } 
+            
+            .form-style-1 button{
+                background: #4B99AD;
+                padding: 8px 15px 8px 15px;
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+              }
+
+            .form-style-1 button:hover{
+              background: #4691A4;
+              box-shadow:none;
+              -moz-box-shadow:none;
+              -webkit-box-shadow:none;
             }
 
 
