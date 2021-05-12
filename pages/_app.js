@@ -12,8 +12,12 @@ import SEO from '../next.seo.config';
 
 import ContextWrapper from '../components/ContextWrapper';
 import { CookiesProvider } from "react-cookie"
-
 // import { appWithTranslation } from '../i18n';
+
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+
+const queryClient = new QueryClient()
 
 
 
@@ -31,12 +35,15 @@ function MyApp({ Component, pageProps, navigation }) {
       <DefaultSeo {...SEO} />
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        {/* <Header isDark /> */}
+
         <ContextWrapper navigation={navigation}>
           <Header navigation={navigation} />
-          {/* <Header  /> */}
-          </ContextWrapper>
-        <Component {...pageProps} />
+        </ContextWrapper>
+
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>
+
       </ThemeProvider>
     </>
   )

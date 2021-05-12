@@ -5,6 +5,8 @@ import Card from '../components/Card';
 
 // import { withTranslation } from '../i18n';
 
+import propTypes from 'prop-types';
+
 
 
  const Home = ({ movies }) => {
@@ -12,16 +14,20 @@ import Card from '../components/Card';
   return (
     <div className='container'>
     {/* <h2>{t('Latest Movies')}</h2> */}
-    {/* <Flex> */}
       {movies && movies.map(movie => {
         return (
           <Card key={movie.id} movie={movie} />
         )
       })}
-    {/* </Flex> */}
     </div>
   )
 };
+
+
+Home.propTypes = {
+  movies: propTypes.array.isRequired,
+}
+
 
 
 export const getServerSideProps = async () => {

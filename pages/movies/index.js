@@ -1,5 +1,6 @@
 // import { useState } from 'react';
 import axios from "axios";
+import Card from '../../components/Card';
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 
@@ -12,15 +13,18 @@ const MoviesPage = ({ movies, page, lastPage }) => {
   // console.log(movies)
   return (
     <CardStyled>
-      <div className="movie_container">
-        <ul className="content">
+      {/* <div className="movie_container"> */}
+      <div className="container">
+        {/* <ul className="content"> */}
           {movies &&
             movies.map((movie) => (
-              <li key={movie.id}>
-                <h3>{movie.title} </h3>
-              </li>
+              // <li key={movie.id}>
+              //   <h3>{movie.title} </h3>
+              // </li>
+              <Card key={movie.id} movie={movie} />
             ))}
-        </ul>
+        {/* </ul> */}
+      </div>
         <div className="btn_container">
           <button
             disabled={page <= 1}
@@ -38,7 +42,7 @@ const MoviesPage = ({ movies, page, lastPage }) => {
           </button>
         </div>
         <div className="btn_container">Page: {page}</div>
-      </div>
+      
     </CardStyled>
   );
 };
@@ -100,7 +104,7 @@ const CardStyled = styled.div`
     } */
 
   .btn_container {
-    max-width: 960px;
+    max-width: 1200px;
     width: 100%;
     /* margin: 0 auto; */
     padding: 30px;
