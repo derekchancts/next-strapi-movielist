@@ -37,7 +37,7 @@ const HeaderStyled = styled.header`
   padding: 20px;
 
   .Headercontainer {
-    max-width: 960px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 30px;
@@ -76,6 +76,11 @@ const HeaderStyled = styled.header`
         
       }
     }
+
+
+    /* @media (max-width: 960px) {
+      max-width: 1200px;
+    } */
 
   }
 `;

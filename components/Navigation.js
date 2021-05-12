@@ -61,14 +61,20 @@ const Navigation = ({ navigation }) => {
         <li>
           <Link  href="/about"><a className={router.pathname === '/about' ? 'active' : ''}>About</a></Link>
         </li>
-        <li>
+        {/* <li>
           <Link  href="/blog"><a className={router.pathname === '/blog' ? 'active' : ''}>Blog</a></Link>
-        </li>
+        </li> */}
         <li>
           <Link  href="/contact"><a className={router.pathname === '/contact' ? 'active' : ''}>Contact</a></Link>
         </li> 
         <li>
+          <Link  href="/movies"><a className={router.pathname === '/movies' ? 'active' : ''}>Pagination</a></Link>
+        </li> 
+        <li>
           <Link  href="/payed"><a className={router.pathname === '/payed' ? 'active' : ''}>Payed Articles</a></Link>
+        </li> 
+        <li>
+          <Link  href="/filter-movies"><a className={router.pathname === '/filter-movies' ? 'active' : ''}>Filter Movies</a></Link>
         </li> 
         {
           (decodedToken.exp * 1000 < Date.now() || decodedToken === '') ? (
@@ -107,7 +113,7 @@ const NavigationStyled = styled.div`
         
 
         li {
-            margin-left: 10px; 
+            margin-left: 15px; 
             padding-top: 10px;
         }
 
@@ -142,6 +148,10 @@ const NavigationStyled = styled.div`
           background-color: #EF6800;
           border-radius: 0.5rem;
           margin-left: 10px;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
     }

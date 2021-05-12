@@ -16,30 +16,13 @@ const Card = ({ movie, year }) => {
   
   return (
     <CardStyled>
-      <div className="poster">
-        {/* <img src={API_URL + movie.poster.url} alt={movie.title}/> */}
-        {movie.poster &&  
-          <Image 
-            src={API_URL + movie.poster.url} 
-            alt={movie.title}
-            width={350}
-            height={400}
-            layout="responsive"
-          />
-        }
-      </div>
       <div className="body">
-        {/* <h3>{ movie.title } - { year }</h3> */}
-        <h3>{ movie.title }</h3>
-        <p dangerouslySetInnerHTML={{ __html: movie.description }}  />
-        {/* <Link href="/movies/[id]" as={`/movies/${movie.id}`} >    Next.js 10 does not require the use of "as". */}  
-        {/* <Link href={`/movies/${movie.id}`} > */}
-        {/* <Link href={`/movies/${movie.slug}`} > */}
-        
-        <Link href={`/movies/${movie.genre.slug}/${movie.slug}`} >
-          <a>More about this movie</a>
-        </Link>
-      </div>
+        <strong>{movie.title}</strong> - {movie.genre ? movie.genre.title : null}<br /><br />
+
+        {movie.actors.length > 0 && movie.actors.map(actor => (
+          <small key={actor.id}>{actor.first_name} {actor.last_name} &nbsp;</small>
+        ))}
+    </div>
     </CardStyled>
   )
 };

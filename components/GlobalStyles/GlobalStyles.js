@@ -405,6 +405,40 @@ const GlobalStyles = () => (
               list-style-type: none;
             }
 
+
+            .filter_container {
+              max-width: 600px;
+              width: 100%;
+              margin: 0 auto;
+              padding: 30px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              text-align: center;
+            }
+
+            /* .filter-option::placeholder {
+              text-align: center;
+            } */
+            
+
+            .filter-option {
+              /* margin-top: 10px; */
+              margin: 0 10px;
+            }
+
+            .filtered_movies {
+              margin: 2rem auto 0;
+              text-align: center;
+            }
+
+
+            /* .filter_status {
+              display: flex;
+              justify-content: flex-end
+            } */
+           
+           
+            .filter_status,
             .login,
             .article,
             .page li h1 {
