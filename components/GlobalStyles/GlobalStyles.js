@@ -405,6 +405,26 @@ const GlobalStyles = () => (
               list-style-type: none;
             }
 
+            .content_container {
+              max-width: 400px;
+              width: 100%;
+              margin: 0 auto;
+              padding: 30px;
+              display: grid;
+              grid-template-columns: 1fr;
+              text-align: center;
+            }
+
+            .content_container .button{
+                background: #4B99AD;
+                padding: 10px 15px 10px 15px;
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+                width: 50%;
+              }
+            
+
 
             .filter_container {
               max-width: 600px;
@@ -515,7 +535,7 @@ const GlobalStyles = () => (
               text-align: center;
               margin: 0.5rem 0;
             } 
-            
+
             .form-style-1 button{
                 background: #4B99AD;
                 padding: 8px 15px 8px 15px;

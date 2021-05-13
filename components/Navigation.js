@@ -78,9 +78,14 @@ const Navigation = ({ navigation }) => {
         </li> 
         {
           (decodedToken.exp * 1000 < Date.now() || decodedToken === '') ? (
-          <li>
-            <Link href="/login"><a className='login'>Login</a></Link>
-          </li>
+          <>
+            <li>
+              <Link href="/login"><a className='login'>Login</a></Link>
+            </li>
+            <li>
+              <Link href="/register"><a className='login'>Register</a></Link>
+            </li>
+          </>
           ) : (
             <>
               <li>
